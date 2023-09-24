@@ -68,7 +68,7 @@
     }
     .service--text{
         padding-left: 20px;
-        width: 468px;
+        max-width: 468px;
         font-size: 14px;
     }
     .testimonial--text{
@@ -164,6 +164,9 @@ label, .accordion-button:focus, .accordion-button:active {
     .get-started--text{
         padding: 10px;
     }
+    .carousel--rate{
+        margin: 0 auto;
+    }
 }
 .brand{
     font-size: 24px;
@@ -180,12 +183,12 @@ label, .accordion-button:focus, .accordion-button:active {
 }
 .text--desc{
     line-height: 20px;
-    width: 468px;
+    max-width: 468px;
 }
 .service--title{
     font-size: 24px;
     font-weight: 700;
-    width: 468px;
+    max-width: 468px;
 }
 
 .feather-24{
@@ -267,8 +270,15 @@ label, .accordion-button:focus, .accordion-button:active {
 .carousel .carousel-item .btn:hover {
     background: #8c5bff;
 }
-.carousel--card{
-    padding: 69px 46px;
+@media (max-width: 768px){
+    .carousel--card{
+        padding: 32px 17px;
+    }
+}
+@media (min-width: 768px){
+    .carousel--card{
+        padding: 69px 46px;
+    }
 }
 .carousel .carousel-item .btn i {
     font-size: 14px;
