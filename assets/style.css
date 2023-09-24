@@ -160,12 +160,27 @@ label, .accordion-button:focus, .accordion-button:active {
         background-color: #0D28A6;
         border-radius: 13px;
         margin: 4px;
+        padding: 38px 0 !important;
     }
     .get-started--text{
-        padding: 10px;
+        padding: 0;
     }
     .carousel--rate{
         margin: 0 auto;
+    }
+    .get-started--title{
+        font-weight: 700;
+        color: white;
+        font-size: 24px !important;
+        margin: 8px;
+        padding: 0 58px !important;
+    }
+    .get-started--desc{
+        font-size: 14px;
+        font-weight: 300;
+        color: white;
+        margin: 8px;
+        padding: 0 58px !important;
     }
 }
 .brand{
