@@ -1,4 +1,4 @@
-<!--FSW3_Challenge1_FSW2308SYN048_AdityaBagusPratama-->
+<!--FSW3_Challenge2_FSW2308SYN048_AdityaBagusPratama-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,33 +16,40 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-
 </head>
 <body>
 <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand brand fw-normal" href="#">Bicarent<span class="fw-bold">.</span></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <div class="container-fluid p-0">
+        <a class="navbar-brand brand fw-normal" href="#"></a>
+        <button class="navbar-toggler p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 px-lg-4">
-                <li class="nav-item">
-                    <a class="nav-link active fw-medium" aria-current="page" href="#services">Our Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active fw-medium" aria-current="page" href="#why-us">Why Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active fw-medium" aria-current="page" href="#testimonial">Testimonial</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active fw-medium" aria-current="page" href="#faq">FAQ</a>
-                </li>
-                <li class="nav-item">
-                    <a class="btn-register nav-link text-white fw-bold" href="#hero">Register</a>
-                </li>
-            </ul>
+        <div class="offcanvas offcanvas-end sm-w-50" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">BCR</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body py-0">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item top-nav">
+                        <a class="nav-link active fw-medium" aria-current="page" href="#services">Our Services</a>
+                    </li>
+                    <li class="nav-item mid-nav">
+                        <a class="nav-link active fw-medium" aria-current="page" href="#why-us">Why Us</a>
+                    </li>
+                    <li class="nav-item mid-nav">
+                        <a class="nav-link active fw-medium" aria-current="page" href="#testimonial">Testimonial</a>
+                    </li>
+                    <li class="nav-item mid-nav">
+                        <a class="nav-link active fw-medium" aria-current="page" href="#faq">FAQ</a>
+                    </li>
+                    <li class="nav-item bot-nav">
+                        <a class="btn-register nav-link text-white fw-bold" href="#hero">Register</a>
+                    </li>
+                </ul>
+            </div>
         </div>
+    </div>
 </nav>
 <main>
     <section class="hero" id="hero">
@@ -54,7 +61,7 @@
                             <span>Sewa & Rental Mobil Terbaik di Indonesia</span>
                         </div>
                         <div class="text--desc">
-                            <span>
+                            <span class="text-wrap">
                                 Selamat datang di Binar Car Rental.
                                 Kami menyediakan mobil kualitas terbaik dengan harga terjangkau.
                                 Selalu siap melayani kebutuhanmu untuk sewa mobil selama 24 jam.
@@ -224,12 +231,12 @@
                         Berbagai review positif dari para pelanggan kami
                     </span>
                 </div>
-                <div class="row my-4">
+                <div class="row">
                     <div class="testimonial--carousel">
-                        <div class="container">
+                        <div class="container p-0">
                             <div class="row">
                                 <div class="col-md-10 mx-auto">
-                                    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true" data-bs-interval="4000">
+                                    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true" data-bs-interval="5000">
                                         <div class="carousel-inner">
                                             <div class="carousel-item active">
                                                 <div class="row">
@@ -241,13 +248,12 @@
                                                                         <img src="assets/images/testi-1.png" class="img-fluid m-auto d-block" alt="testi-1">
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-sm-10">
+                                                                <div class="col-sm-10 p-0">
                                                                     <div class="carousel--content">
                                                                         <div class="vstack gap-3">
-                                                                            <img src="assets/images/rate.png" class="carousel--rate img-fluid" alt="rating">
+                                                                            <img src="assets/images/rate.png" class="mx-xs-auto carousel--rate img-fluid" alt="rating">
                                                                             <span class="carousel--desc">
-                                                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aspernatur doloremque molestias necessitatibus perspiciatis quos voluptatibus. Ipsam laboriosam provident sit. Fugit perferendis tempora voluptates? Architecto dignissimos eum perspiciatis sapiente tempora!
-                                                                            </span>
+                                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod                                                                       </span>
                                                                             <span class="carousel--author fw-medium">
                                                                                 John Dee 32, Bromo
                                                                             </span>
@@ -269,12 +275,12 @@
                                                                         <img src="assets/images/testi-2.png" class="img-fluid m-auto d-block" alt="testi-1">
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-sm-10">
+                                                                <div class="col-sm-10 p-0">
                                                                     <div class="carousel--content">
                                                                         <div class="vstack gap-3">
                                                                             <img src="assets/images/rate.png" class="carousel--rate img-fluid" alt="rating">
                                                                             <span class="carousel--desc">
-                                                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aspernatur doloremque molestias necessitatibus perspiciatis quos voluptatibus. Ipsam laboriosam provident sit. Fugit perferendis tempora voluptates? Architecto dignissimos eum perspiciatis sapiente tempora!
+                                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                                                                             </span>
                                                                             <span class="carousel--author fw-medium">
                                                                                 John Don 37, Merapi
@@ -297,12 +303,12 @@
                                                                         <img src="assets/images/testi-1.png" class="img-fluid m-auto d-block" alt="testi-1">
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-sm-10">
+                                                                <div class="col-sm-10 p-0">
                                                                     <div class="carousel--content">
                                                                         <div class="vstack gap-3">
                                                                             <img src="assets/images/rate.png" class="carousel--rate img-fluid" alt="rating">
                                                                             <span class="carousel--desc">
-                                                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aspernatur doloremque molestias necessitatibus perspiciatis quos voluptatibus. Ipsam laboriosam provident sit. Fugit perferendis tempora voluptates? Architecto dignissimos eum perspiciatis sapiente tempora!
+                                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                                                                             </span>
                                                                             <span class="carousel--author fw-medium">
                                                                                 John Dae 30, Prau
@@ -325,12 +331,12 @@
                                                                         <img src="assets/images/testi-2.png" class="img-fluid m-auto d-block" alt="testi-1">
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-sm-10">
+                                                                <div class="col-sm-10 p-0">
                                                                     <div class="carousel--content">
                                                                         <div class="vstack gap-3">
                                                                             <img src="assets/images/rate.png" class="carousel--rate img-fluid" alt="rating">
                                                                             <span class="carousel--desc">
-                                                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aspernatur doloremque molestias necessitatibus perspiciatis quos voluptatibus. Ipsam laboriosam provident sit. Fugit perferendis tempora voluptates? Architecto dignissimos eum perspiciatis sapiente tempora!
+                                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                                                                             </span>
                                                                             <span class="carousel--author fw-medium">
                                                                                 John Doe 36, Semeru
@@ -346,10 +352,10 @@
                                         </div>
                                         <!-- Carousel controls -->
                                         <div class="carousel--control my-3">
-                                            <a class="carousel-control-prev opacity-100 d-inline" data-bs-target="#myCarousel" data-bs-slide="prev">
+                                            <a class="carousel-control-prev opacity-100 d-inline" data-bs-target="#myCarousel" role="button" data-bs-slide="prev">
                                                 <img src="assets/images/btn_left.png" alt="btn-left" class="img-fluid">
                                             </a>
-                                            <a class="carousel-control-next opacity-100 d-inline" data-bs-target="#myCarousel" data-bs-slide="next">
+                                            <a class="carousel-control-next opacity-100 d-inline" data-bs-target="#myCarousel" role="button" data-bs-slide="next">
                                                 <img src="assets/images/btn_right.png" alt="btn-right" class="img-fluid">
                                             </a>
                                         </div>
@@ -357,7 +363,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -376,7 +381,7 @@
                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </span>
                     </div>
-                    <div class="row my-4">
+                    <div class="row mb-4">
                         <div class="get-started--btn mt-2">
                             <a class="nav-link btn-standard text-white fw-bold d-inline" href="#">Mulai Sewa Mobil</a>
                         </div>
@@ -389,16 +394,16 @@
         <div class="container-fluid faq--text">
             <div class="row">
                 <div class="col-lg-5">
-                    <div class="faq--title mb-4">
+                    <div class="faq--title text-left mb-4">
                         <span>Frequently Asked Question</span>
                     </div>
-                    <div class="faq--desc">
-                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+                    <div class="faq--desc text-left mb-4">
+                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing</span>
                     </div>
                 </div>
                 <div class="col-lg-7">
-                    <div class="accordion container-fluid" id="accordionExample">
-                        <div class="accordion-item mb-4">
+                    <div class="accordion container-fluid p-0" id="accordionExample">
+                        <div class="accordion-block mb-3">
                             <h2 class="accordion-header" id="headingOne">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                     Apa saja syarat yang dibutuhkan?
@@ -410,7 +415,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item my-4">
+                        <div class="accordion-block my-3">
                             <h2 class="accordion-header" id="headingTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                     Berapa hari minimal sewa mobil lepas kunci?
@@ -422,7 +427,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item my-4">
+                        <div class="accordion-block my-3">
                             <h2 class="accordion-header" id="headingThree">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                     Berapa hari sebelumnya sabaiknya booking sewa mobil?
@@ -434,7 +439,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item my-4">
+                        <div class="accordion-block my-3">
                             <h2 class="accordion-header" id="headingFour">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                                     Apakah Ada biaya antar-jemput?
@@ -446,7 +451,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item mt-4">
+                        <div class="accordion-block mt-3">
                             <h2 class="accordion-header" id="headingFive">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                                     Bagaimana jika terjadi kecelakaan
@@ -465,20 +470,20 @@
     </section>
 </main>
 <footer class="footer" id="footer">
-    <div class="container-fluid p-0">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-lg-4 vstack gap-3">
                 <span>Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000</span>
                 <span>binarcarrental@gmail.com</span>
                 <span>081-233-334-808</span>
             </div>
-            <div class="col-lg-2 vstack gap-3">
+            <div class="col-lg-2 vstack gap-3 foot-menu">
                 <a href="#services" class="fw-medium text-decoration-none text-black">Our services</a>
                 <a href="#why-us" class="fw-medium text-decoration-none text-black">Why Us</a>
                 <a href="#testimonial" class="fw-medium text-decoration-none text-black">Testimonial</a>
                 <a href="#faq" class="fw-medium text-decoration-none text-black">FAQ</a>
             </div>
-            <div class="col-lg-4 vstack gap-3">
+            <div class="col-lg-4 vstack gap-3 foot-connect">
                 <span>Connect with us</span>
                 <ul class="footer--social list-unstyled">
                     <li class="footer--social__item d-inline me-2">
@@ -511,13 +516,20 @@
             <div class="col-lg-2">
                 <span class="mb-4">Copyright Binar 2022</span>
                 <br>
-                <a class="brand fw-normal text-decoration-none text-black" href="#">Bicarent<span class="fw-bold">.</span></a>
+                <a class="brand" href="#"></a>
             </div>
         </div>
     </div>
 </footer>
 <script>
     feather.replace()
+</script>
+<script>
+    // function openNav() {
+    //     // document.getElementById("myNav").style.width = "250px";
+    //     // document.getElementById("main").style.marginLeft = "250px";
+    //     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    // }
 </script>
 </body>
 </html>

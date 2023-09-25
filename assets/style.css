@@ -5,17 +5,52 @@
     background-color: #5CB85F;
     padding: 8px 12px;
     border-radius: 2px;
+    display: inline-block;
 }
 .btn-standard{
     background-color: #5CB85F;
     padding: 8px 12px;
     border-radius: 2px;
 }
+.top-nav{
+    margin-bottom: 5px;
+}
+.mid-nav{
+    margin: 5px 0;
+}
+.bot-nav{
+    margin-top: 5px;
+}
+.btn-close{
+    opacity: 1;
+}
+.brand{
+    width: 100px;
+    height: 34px;
+    background-color: #0D28A6;
+    display: block;
+    margin: 16px 0 60px 0;
+}
 .nav-link{
     font-weight: 400;
 }
 .hero{
     background-color: #F1F3FF;
+}
+
+@media (max-width: 1080px) {
+    .offcanvas{
+        max-width: 50%;
+    }
+}
+@media (min-width: 1080px) {
+    .offcanvas{
+        max-width: 100%;
+    }
+}
+
+.faq--text{
+    margin-top: 60px;
 }
 @media (min-width: 1080px) {
     .text-banner{
@@ -39,7 +74,7 @@
     }
     .service--text{
         padding-left: 20px;
-        width: 468px;
+        max-width: 468px;
         font-size: 14px;
     }
     .testimonial--text{
@@ -51,7 +86,7 @@
         margin: 100px 136px
     }
     .faq--text{
-        padding: 100px 136px
+        padding: 100px 136px;
     }
     .get-started--text{
         padding: 64px 210px
@@ -64,11 +99,50 @@
         padding: 0 80px;
     }
 }
-.accordion-item{
-    border-radius: 4px;
-    border-width: 1px;
-    border-color: #D4D4D4;
+.footer{
+    margin-top: 60px;
 }
+
+.accordion-button{
+    flex-shrink: 0;
+    border-radius: 4px;
+    border: 1px solid #D4D4D4 !important;
+}
+.accordion-body{
+    border: 1px solid #D4D4D4 !important;
+    border-bottom-right-radius: 4px !important;
+    border-bottom-left-radius: 4px !important;
+}
+.navbar-toggler-icon{
+    width: 24px;
+    height: 24px;
+}
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+.navbar-toggler{
+    border: 0;
+}
+
+/*.navbar-nav li a {*/
+/*    color: white !important;*/
+/*}*/
+
+
+/*.accordion-button::after {*/
+/*    transform: none !important;*/
+/*    transition: none !important;*/
+/*}*/
+label, .accordion-button:focus, .accordion-button:active {
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    .accordion-button{
+        border-bottom-right-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
+    }
+}
+
 @media (min-width: 320px) and (max-width: 768px) {
     .navbar{
         background-color: #F1F3FF;
@@ -96,9 +170,36 @@
         background-color: #0D28A6;
         border-radius: 13px;
         margin: 4px;
+        padding: 38px 0 !important;
     }
     .get-started--text{
-        padding: 10px;
+        padding: 0;
+    }
+    .carousel--rate{
+        margin: 0 auto;
+    }
+    .get-started--title{
+        font-weight: 700;
+        color: white;
+        font-size: 24px !important;
+        margin: 8px;
+        padding: 0 58px !important;
+    }
+    .get-started--desc{
+        font-size: 14px;
+        font-weight: 300;
+        color: white;
+        margin: 8px;
+        padding: 0 58px !important;
+    }
+    .faq--title{
+        text-align: center;
+    }
+    .faq--desc{
+        text-align: center;
+    }
+    .foot-menu, .foot-connect{
+        margin-top: 16px;
     }
 }
 .brand{
@@ -116,12 +217,12 @@
 }
 .text--desc{
     line-height: 20px;
-    width: 468px;
+    max-width: 468px;
 }
 .service--title{
     font-size: 24px;
     font-weight: 700;
-    width: 468px;
+    max-width: 468px;
 }
 
 .feather-24{
@@ -203,8 +304,15 @@
 .carousel .carousel-item .btn:hover {
     background: #8c5bff;
 }
-.carousel--card{
-    padding: 69px 46px;
+@media (max-width: 768px){
+    .carousel--card{
+        padding: 32px 17px;
+    }
+}
+@media (min-width: 768px){
+    .carousel--card{
+        padding: 69px 46px;
+    }
 }
 .carousel .carousel-item .btn i {
     font-size: 14px;
