@@ -236,7 +236,7 @@
                         <div class="container p-0">
                             <div class="row">
                                 <div class="col-md-10 mx-auto">
-                                    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
+                                    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true" data-bs-interval="5000">
                                         <div class="carousel-inner">
                                             <div class="carousel-item active">
                                                 <div class="row">
@@ -352,10 +352,10 @@
                                         </div>
                                         <!-- Carousel controls -->
                                         <div class="carousel--control my-3">
-                                            <a class="carousel-control-prev opacity-100 d-inline" data-bs-target="#myCarousel" data-bs-slide="prev">
+                                            <a class="carousel-control-prev opacity-100 d-inline" data-bs-target="#myCarousel" role="button" data-bs-slide="prev">
                                                 <img src="assets/images/btn_left.png" alt="btn-left" class="img-fluid">
                                             </a>
-                                            <a class="carousel-control-next opacity-100 d-inline" data-bs-target="#myCarousel" data-bs-slide="next">
+                                            <a class="carousel-control-next opacity-100 d-inline" data-bs-target="#myCarousel" role="button" data-bs-slide="next">
                                                 <img src="assets/images/btn_right.png" alt="btn-right" class="img-fluid">
                                             </a>
                                         </div>
@@ -363,7 +363,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -395,15 +394,15 @@
         <div class="container-fluid faq--text">
             <div class="row">
                 <div class="col-lg-5">
-                    <div class="faq--title mb-4">
+                    <div class="faq--title text-left mb-4">
                         <span>Frequently Asked Question</span>
                     </div>
-                    <div class="faq--desc">
-                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+                    <div class="faq--desc text-left mb-4">
+                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing</span>
                     </div>
                 </div>
                 <div class="col-lg-7">
-                    <div class="accordion container-fluid" id="accordionExample">
+                    <div class="accordion container-fluid p-0" id="accordionExample">
                         <div class="accordion-block mb-3">
                             <h2 class="accordion-header" id="headingOne">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -471,20 +470,20 @@
     </section>
 </main>
 <footer class="footer" id="footer">
-    <div class="container-fluid p-0">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-lg-4 vstack gap-3">
                 <span>Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000</span>
                 <span>binarcarrental@gmail.com</span>
                 <span>081-233-334-808</span>
             </div>
-            <div class="col-lg-2 vstack gap-3">
+            <div class="col-lg-2 vstack gap-3 foot-menu">
                 <a href="#services" class="fw-medium text-decoration-none text-black">Our services</a>
                 <a href="#why-us" class="fw-medium text-decoration-none text-black">Why Us</a>
                 <a href="#testimonial" class="fw-medium text-decoration-none text-black">Testimonial</a>
                 <a href="#faq" class="fw-medium text-decoration-none text-black">FAQ</a>
             </div>
-            <div class="col-lg-4 vstack gap-3">
+            <div class="col-lg-4 vstack gap-3 foot-connect">
                 <span>Connect with us</span>
                 <ul class="footer--social list-unstyled">
                     <li class="footer--social__item d-inline me-2">
@@ -517,7 +516,7 @@
             <div class="col-lg-2">
                 <span class="mb-4">Copyright Binar 2022</span>
                 <br>
-                <a class="brand fw-normal text-decoration-none text-black" href="#">Bicarent<span class="fw-bold">.</span></a>
+                <a class="brand" href="#"></a>
             </div>
         </div>
     </div>

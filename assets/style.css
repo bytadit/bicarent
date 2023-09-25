@@ -28,6 +28,8 @@
     width: 100px;
     height: 34px;
     background-color: #0D28A6;
+    display: block;
+    margin: 16px 0 60px 0;
 }
 .nav-link{
     font-weight: 400;
@@ -45,6 +47,10 @@
     .offcanvas{
         max-width: 100%;
     }
+}
+
+.faq--text{
+    margin-top: 60px;
 }
 @media (min-width: 1080px) {
     .text-banner{
@@ -80,7 +86,7 @@
         margin: 100px 136px
     }
     .faq--text{
-        padding: 100px 136px
+        padding: 100px 136px;
     }
     .get-started--text{
         padding: 64px 210px
@@ -93,6 +99,10 @@
         padding: 0 80px;
     }
 }
+.footer{
+    margin-top: 60px;
+}
+
 .accordion-button{
     flex-shrink: 0;
     border-radius: 4px;
@@ -181,6 +191,15 @@ label, .accordion-button:focus, .accordion-button:active {
         color: white;
         margin: 8px;
         padding: 0 58px !important;
+    }
+    .faq--title{
+        text-align: center;
+    }
+    .faq--desc{
+        text-align: center;
+    }
+    .foot-menu, .foot-connect{
+        margin-top: 16px;
     }
 }
 .brand{
