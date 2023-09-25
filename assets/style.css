@@ -29,7 +29,6 @@
     height: 34px;
     background-color: #0D28A6;
     display: block;
-    margin: 16px 0 60px 0;
 }
 .nav-link{
     font-weight: 400;
@@ -98,11 +97,16 @@
         margin: 30px auto 60px;
         padding: 0 80px;
     }
+    .foot-text{
+        padding: 0;
+    }
 }
 .footer{
     margin-top: 60px;
 }
-
+.footer{
+    margin-top: 60px;
+}
 .accordion-button{
     flex-shrink: 0;
     border-radius: 4px;
@@ -124,15 +128,6 @@
     border: 0;
 }
 
-/*.navbar-nav li a {*/
-/*    color: white !important;*/
-/*}*/
-
-
-/*.accordion-button::after {*/
-/*    transform: none !important;*/
-/*    transition: none !important;*/
-/*}*/
 label, .accordion-button:focus, .accordion-button:active {
     outline: none !important;
     box-shadow: none !important;
@@ -142,7 +137,6 @@ label, .accordion-button:focus, .accordion-button:active {
         border-bottom-left-radius: 0 !important;
     }
 }
-
 @media (min-width: 320px) and (max-width: 768px) {
     .navbar{
         background-color: #F1F3FF;
@@ -201,6 +195,20 @@ label, .accordion-button:focus, .accordion-button:active {
     .foot-menu, .foot-connect{
         margin-top: 16px;
     }
+    .brand-bottom{
+        width: 100px;
+        height: 34px;
+        background-color: #0D28A6;
+        display: block;
+        margin: 16px 0 60px 0 !important;
+    }
+}
+.brand-bottom{
+    width: 100px;
+    height: 34px;
+    background-color: #0D28A6;
+    display: block;
+    margin: 16px 0 60px 0 !important;
 }
 .brand{
     font-size: 24px;
