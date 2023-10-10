@@ -1,3 +1,5 @@
+# Success Evidence
+![bytadit-CHA3-proof](https://raw.githubusercontent.com/bytadit/bicarent/Challenge_3/result.png)
 # Javascript: Array Challenge
 
 Tugasmu disini adalah memodifikasi file-file berikut:
