@@ -1,28 +1,10 @@
-// function sortCarByYearAscendingly(cars) {
-//   // Clone array untuk menghindari side-effect -> intinya tanpa spread mk array asli akan terpengaruh, kita gak pengen itu terjadi
-//   const result = [...cars];
-//   const resLen = result.length;
-//
-//   // Bubble Sort
-//   for(let i = 0; i < resLen; i++) {
-//     for(let j = 0; j < resLen - i - 1; j++) {
-//       if(result[j].year > result[j + 1].year) {
-//         let tmp = result[j];
-//         result[j] = result[j + 1];
-//         result[j + 1] = tmp;
-//       }
-//     }
-//   }
-//   console.table(result);
-//   return result;
-// }
-
-// quick sort
+// Versi quick sort
 const sortCarByYearAscendingly = (cars) => {
+  // cek jika panjang object kurang dari sama dengan 1, maka langsung return objek saja (tidak bisa disort)
   if (cars.length <= 1) {
     return cars;
   }
-
+  // pivot memakai property tahun di elemen pertama. memakai elemen pertama untuk memudahkan looping
   let pivot = cars[0]['year'];
   let leftArr = [];
   let rightArr = [];
@@ -34,6 +16,6 @@ const sortCarByYearAscendingly = (cars) => {
       rightArr.push(cars[i]);
     }
   }
-  // return spread recursively
+  // return spread recursively (akan direturn function secara recursive, yang akan memastikan bahwa leftArr dan rightArr akan terurut/sorted)
   return [...sortCarByYearAscendingly(leftArr), cars[0], ...sortCarByYearAscendingly(rightArr)];
 };
