@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FSW3-Aditya Bagus Pratama</title>
+    <!--  Import Bootstrap CDN  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="https://fonts.cdnfonts.com/css/helvetica-neue-55" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <!--  Import JQuery (barangkali butuh)  -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid p-0">
+            <a class="navbar-brand brand fw-normal" href="/"></a>
+            <button class="navbar-toggler p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation" id="OpenMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="offcanvas offcanvas-end sm-w-50" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">BCR</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body py-0">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item top-nav">
+                            <a class="nav-link active fw-medium" aria-current="page" href="/#services">Our Services</a>
+                        </li>
+                        <li class="nav-item mid-nav">
+                            <a class="nav-link active fw-medium" aria-current="page" href="/#why-us">Why Us</a>
+                        </li>
+                        <li class="nav-item mid-nav">
+                            <a class="nav-link active fw-medium" aria-current="page" href="/#testimonial">Testimonial</a>
+                        </li>
+                        <li class="nav-item mid-nav">
+                            <a class="nav-link active fw-medium" aria-current="page" href="/#faq">FAQ</a>
+                        </li>
+                        <li class="nav-item bot-nav">
+                            <a class="btn-register nav-link text-white fw-bold" href="/#hero">Register</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- end navbar -->
+    <main>
+        <section class="hero" id="hero">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6 text-banner">
+                        <div class="hero--text vstack gap-3">
+                            <div class="text--title fw-bold">
+                                <span>Sewa & Rental Mobil Terbaik di Indonesia</span>
+                            </div>
+                            <div class="text--desc">
+                                <span class="text-wrap">
+                                Selamat datang di Binar Car Rental.
+                                Kami menyediakan mobil kualitas terbaik dengan harga terjangkau.
+                                Selalu siap melayani kebutuhanmu untuk sewa mobil selama 24 jam.
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 img-banner">
+                        <img class="img-fluid" src="./assets/images/img_car.png" alt="car-images">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="position-absolute start-50 translate-middle w-100">
+                <div class="container-fluid content-row">
+                    <div class="row">
+                        <div class="col-md d-flex justify-content-center">
+                            <div class="card">
+                                <div class="card-body shadow">
+                                    <div class="row">
+                                        <div class="col-md">
+                                            <label for="driverType" class="form-label col-form-label-sm">Tipe
+                                                Driver</label>
+                                            <select class="form-select form-select-sm" id="driverType" aria-label="Default select example">
+                                                <option selected>Pilih Tipe Driver</option>
+                                                <option value="true">Dengan Sopir</option>
+                                                <option value="false">Tanpa Sopir (Lepas Kunci)</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md">
+                                            <label for="tanggal" class="form-label col-form-label-sm">Tanggal</label>
+                                            <input type="date" class="form-control form-control-sm" id="tanggal" required />
+                                        </div>
+                                        <div class="col-md">
+                                            <label for="wkt_jemput" class="form-label col-form-label-sm">Waktu
+                                                Jemput/Ambil</label>
+                                            <select class="form-select form-select-sm icon-rtl" id="wkt_jemput" aria-label="Default select example" required>
+                                                <option disabled selected>Pilih Waktu</option>
+                                                <option value="08:00:00">08.00 WIB</option>
+                                                <option value="09:00:00">09.00 WIB</option>
+                                                <option value="10:00:00">10.00 WIB</option>
+                                                <option value="11:00:00">11.00 WIB</option>
+                                                <option value="12:00:00">12.00 WIB</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label for="jmlhPenumpang" class="form-label col-form-label-sm">Jumlah
+                                                Penumpang (Opsional)</label>
+                                            <input type="number" class="form-control form-control-sm" id="jmlhPenumpang" placeholder="Jumlah Penumpang" />
+                                        </div>
+                                        <div class="col-md-2 text-center align-items-end d-flex">
+                                            <button class="btn-register border-0 p-1 text-white form-control form-control-sm fw-medium d-inline border" type="submit" id="btn-search">Cari Mobil
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="cars">
+            <div class="container">
+                <div class="row" id="root">
+                </div>
+            </div>
+        </section>
+        <section class="col-lg-4 m-auto mt-5 warning visually-hidden">
+            <div class="alert alert-warning alert-dismissible fade show text-center" role="alert"><span class="fw-bold">Tidak ada mobil yang bisa disewa!</span>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </section>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4 vstack gap-3">
+                    <span>Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000</span>
+                    <span>binarcarrental@gmail.com</span>
+                    <span>081-233-334-808</span>
+                </div>
+                <div class="col-lg-2 vstack gap-3 foot-menu">
+                    <a href="#services" class="fw-medium text-decoration-none text-black">Our services</a>
+                    <a href="#why-us" class="fw-medium text-decoration-none text-black">Why Us</a>
+                    <a href="#testimonial" class="fw-medium text-decoration-none text-black">Testimonial</a>
+                    <a href="#faq" class="fw-medium text-decoration-none text-black">FAQ</a>
+                </div>
+                <div class="col-lg-4 vstack gap-3 foot-connect">
+                    <span>Connect with us</span>
+                    <ul class="footer--social list-unstyled">
+                        <li class="footer--social__item d-inline me-2">
+                            <a class="footer--social__link text-decoration-none" aria-current="page" href="https://facebook.com" target="_blank">
+                                <img src="./assets/images/icon_facebook.png" alt="fb-icon">
+                            </a>
+                        </li>
+                        <li class="footer--social__item d-inline mx-2">
+                            <a class="footer--social__link text-decoration-none" aria-current="page" href="https://instagram.com" target="_blank">
+                                <img src="./assets/images/icon_instagram.png" alt="ig-icon">
+                            </a>
+                        </li>
+                        <li class="footer--social__item d-inline mx-2">
+                            <a class="footer--social__link text-decoration-none" aria-current="page" href="https://twitter.com" target="_blank">
+                                <img src="./assets/images/icon_twitter.png" alt="twitter-icon">
+                            </a>
+                        </li>
+                        <li class="footer--social__item d-inline mx-2">
+                            <a class="footer--social__link text-decoration-none" aria-current="page" href="https://gmail.com" target="_blank">
+                                <img src="./assets/images/icon_mail.png" alt="mail-icon">
+                            </a>
+                        </li>
+                        <li class="footer--social__item d-inline ms-2">
+                            <a class="footer--social__link text-decoration-none" aria-current="page" href="https://twitch.com" target="_blank">
+                                <img src="./assets/images/icon_twitch.png" alt="twitch-icon">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 foot-text">
+                    <span class="mb-4">Copyright Binar 2022</span>
+                    <br>
+                    <a class="brand-bottom" href="#"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        feather.replace()
+    </script>
+    <script type="text/javascript" src="./scripts/script.js"></script>
+    <script type="text/javascript" src="./scripts/binar.js"></script>
+    <script type="text/javascript" src="./scripts/Component.js"></script>
+    <script type="text/javascript" src="./scripts/Car.js"></script>
+    <script type="text/javascript" src="./scripts/main.js"></script>
+</body>
+
+</html>

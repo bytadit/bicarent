@@ -1,0 +1,421 @@
+.navbar {
+    background-color: #F1F3FF;
+}
+
+.btn-register {
+    background-color: #5CB85F;
+    padding: 8px 12px;
+    border-radius: 2px;
+    display: inline-block;
+}
+
+.btn-standard {
+    background-color: #5CB85F;
+    padding: 8px 12px;
+    border-radius: 2px;
+}
+
+.top-nav {
+    margin: 5px 0 !important;
+}
+
+.mid-nav {
+    margin: 5px 0;
+}
+
+.bot-nav {
+    margin-top: 5px;
+}
+
+.btn-close {
+    opacity: 1;
+}
+
+.brand {
+    width: 100px;
+    height: 34px;
+    background-color: #0D28A6;
+    display: block;
+}
+
+.nav-link {
+    font-weight: 400;
+}
+
+.hero {
+    background-color: #F1F3FF;
+}
+
+@media (max-width: 1080px) {
+    .offcanvas {
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 1080px) {
+    .offcanvas {
+        max-width: 100%;
+    }
+}
+
+.faq--text {
+    margin-top: 60px;
+}
+
+@media (min-width: 1080px) {
+    .text-banner {
+        padding: 24px 10px 0 136px;
+    }
+    .navbar {
+        background-color: #F1F3FF;
+        padding: 24px 136px;
+    }
+    .nav-item {
+        padding: 0 16px;
+    }
+    .services>.container-fluid>.row {
+        margin: 100px 206px;
+    }
+    .service--img {
+        padding-right: 35px;
+    }
+    .why-us--text {
+        padding: 80px 136px;
+    }
+    .service--text {
+        padding-left: 20px;
+        max-width: 468px;
+        font-size: 14px;
+    }
+    .testimonial--text {
+        padding: 80px 136px;
+    }
+    .get-started--card {
+        background-color: #0D28A6;
+        border-radius: 13px;
+        margin: 100px 136px
+    }
+    .faq--text {
+        padding: 100px 136px;
+    }
+    .get-started--text {
+        padding: 64px 210px
+    }
+    .footer {
+        padding: 80px 136px;
+    }
+    .carousel {
+        margin: 30px auto 60px;
+        padding: 0 80px;
+    }
+    .foot-text {
+        padding: 0;
+    }
+}
+
+.footer {
+    margin-top: 60px;
+}
+
+.accordion-button {
+    flex-shrink: 0;
+    border-radius: 4px;
+    border: 1px solid #D4D4D4 !important;
+}
+
+.accordion-body {
+    border: 1px solid #D4D4D4 !important;
+    border-bottom-right-radius: 4px !important;
+    border-bottom-left-radius: 4px !important;
+}
+
+.navbar-toggler-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler {
+    border: 0;
+}
+
+label,
+.accordion-button:focus,
+.accordion-button:active {
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    .accordion-button {
+        border-bottom-right-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .navbar {
+        background-color: #F1F3FF;
+        padding: 10px;
+    }
+    .service--img {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .services>.container-fluid>.row {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .why-us--card {
+        border-color: #D0D0D0;
+        border-width: 1px;
+        border-radius: 8px;
+        margin: 10px 0;
+    }
+    .service--text {
+        margin: 10px 0;
+        font-size: 14px;
+    }
+    .get-started--card {
+        background-color: #0D28A6;
+        border-radius: 13px;
+        margin: 4px;
+        padding: 38px 0 !important;
+    }
+    .get-started--text {
+        padding: 0;
+    }
+    .carousel--rate {
+        margin: 0 auto;
+    }
+    .get-started--title {
+        font-weight: 700;
+        color: white;
+        font-size: 24px !important;
+        margin: 8px;
+        padding: 0 58px !important;
+    }
+    .get-started--desc {
+        font-size: 14px;
+        font-weight: 300;
+        color: white;
+        margin: 8px;
+        padding: 0 58px !important;
+    }
+    .faq--title {
+        text-align: center;
+    }
+    .faq--desc {
+        text-align: center;
+    }
+    .foot-menu,
+    .foot-connect {
+        margin-top: 16px;
+    }
+    .brand-bottom {
+        width: 100px;
+        height: 34px;
+        background-color: #0D28A6;
+        display: block;
+        margin: 16px 0 60px 0 !important;
+    }
+    .top-nav {
+        margin: 5px;
+    }
+}
+
+.brand-bottom {
+    width: 100px;
+    height: 34px;
+    background-color: #0D28A6;
+    display: block;
+    margin: 16px 0 60px 0 !important;
+}
+
+.brand {
+    font-size: 24px;
+}
+
+.img-banner {
+    padding: 24px 0 0 0;
+}
+
+.hero--text {
+    padding: 80px 0;
+}
+
+.text--title {
+    font-size: 36px;
+    line-height: 54px;
+}
+
+.text--desc {
+    line-height: 20px;
+    max-width: 468px;
+}
+
+.service--title {
+    font-size: 24px;
+    font-weight: 700;
+    max-width: 468px;
+}
+
+.feather-24 {
+    width: 24px;
+    height: 24px;
+}
+
+.service--icon {
+    background-color: #CFD4ED;
+    padding: 4px;
+}
+
+.why-us--title {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.why-us--desc {
+    font-size: 14px;
+}
+
+.testimonial--title {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.testimonial--desc {
+    font-size: 14px;
+}
+
+.faq--title {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.faq--desc {
+    font-size: 14px;
+}
+
+.get-started--title {
+    font-weight: 700;
+    color: white;
+    font-size: 36px;
+    margin: 8px;
+}
+
+.get-started--desc {
+    font-size: 14px;
+    font-weight: 300;
+    color: white;
+    margin: 8px;
+    padding: 0 80px;
+}
+
+.why-us--card {
+    border-color: #D0D0D0;
+    border-width: 1px;
+    border-radius: 8px;
+}
+
+.why-us--card__title {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.why-us--card__desc {
+    font-size: 14px;
+}
+
+.carousel .carousel-item {
+    text-align: center;
+    overflow: hidden;
+}
+
+.carousel .carousel-item h4 {
+    font-family: 'Varela Round', sans-serif;
+}
+
+.carousel .carousel-item img {
+    max-width: 80px;
+    display: inline-block;
+}
+
+.carousel .carousel-item .btn {
+    border-radius: 0;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    background: #a177ff;
+    padding: 6px 15px;
+    margin-top: 5px;
+}
+
+.carousel .carousel-item .btn:hover {
+    background: #8c5bff;
+}
+
+@media (max-width: 768px) {
+    .carousel--card {
+        padding: 32px 17px;
+    }
+}
+
+@media (min-width: 768px) {
+    .carousel--card {
+        padding: 69px 46px;
+    }
+}
+
+.carousel .carousel-item .btn i {
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.carousel .thumb-wrapper {
+    margin: 5px;
+    border-radius: 8px;
+    text-align: left;
+    background-color: #F1F3FF;
+}
+
+.carousel .carousel--content {
+    padding: 15px;
+    font-size: 13px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: relative;
+    margin: auto 0;
+}
+
+.carousel-control-prev i,
+.carousel-control-next i {
+    font-size: 36px;
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    margin: -19px 0 0 0;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: none;
+    font-weight: bold;
+}
+
+.carousel-control-prev i {
+    margin-left: -3px;
+}
+
+.carousel-control-next i {
+    margin-right: -3px;
+}
+
+.cars {
+    margin-top: 80px;
+}

@@ -1,12 +1,25 @@
 {
-  "name": "binar-fsw-challenge-04",
-  "version": "1.0.0",
-  "description": "Project HTTP Server dan DOM",
-  "main": "server/index.js",
-  "author": "Fikri Rahmat Nurhidayat <fnurhidayat@binar.co.id>",
-  "license": "MIT",
-  "private": false,
-  "scripts": {
-    "start": "node server/index.js"
-  }
+    "name": "synrgy-fsw3-cha4",
+    "version": "1.0.0",
+    "description": "Synrygy Challenge 3 by Aditya Bagus Pratama",
+    "main": "index.js",
+    "scripts": {
+        "start": "node server/index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/fnurhidayat/probable-garbanzo.git"
+    },
+    "keywords": [
+        "binar"
+    ],
+    "author": "Aditya Bagus Pratama",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/fnurhidayat/probable-garbanzo/issues"
+    },
+    "homepage": "https://github.com/fnurhidayat/probable-garbanzo#readme",
+    "dependencies": {
+        "express": "^4.18.2"
+    }
 }
