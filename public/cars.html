@@ -89,7 +89,7 @@
                                             <label for="driverType" class="form-label col-form-label-sm">Tipe
                                                 Driver</label>
                                             <select class="form-select form-select-sm" id="driverType" aria-label="Default select example">
-                                                <option selected>Pilih Tipe Driver</option>
+                                                <option selected value="">Pilih Tipe Driver</option>
                                                 <option value="true">Dengan Sopir</option>
                                                 <option value="false">Tanpa Sopir (Lepas Kunci)</option>
                                             </select>
@@ -102,7 +102,7 @@
                                             <label for="wkt_jemput" class="form-label col-form-label-sm">Waktu
                                                 Jemput/Ambil</label>
                                             <select class="form-select form-select-sm icon-rtl" id="wkt_jemput" aria-label="Default select example" required>
-                                                <option disabled selected>Pilih Waktu</option>
+                                                <option selected value="">Pilih Waktu</option>
                                                 <option value="08:00:00">08.00 WIB</option>
                                                 <option value="09:00:00">09.00 WIB</option>
                                                 <option value="10:00:00">10.00 WIB</option>
@@ -116,7 +116,7 @@
                                             <input type="number" class="form-control form-control-sm" id="jmlhPenumpang" placeholder="Jumlah Penumpang" />
                                         </div>
                                         <div class="col-md-2 text-center align-items-end d-flex">
-                                            <button class="btn-register border-0 p-1 text-white form-control form-control-sm fw-medium d-inline border" type="submit" id="btn-search">Cari Mobil
+                                            <button disabled class="btn-register border-0 p-1 text-white form-control form-control-sm fw-medium d-inline border" type="submit" id="btn-search">Cari Mobil
                                             </button>
                                         </div>
                                     </div>
@@ -199,6 +199,24 @@
     <script type="text/javascript" src="./scripts/Component.js"></script>
     <script type="text/javascript" src="./scripts/Car.js"></script>
     <script type="text/javascript" src="./scripts/main.js"></script>
+    <script>
+        let inputDriver = document.getElementById('driverType');
+        let inputTgl = document.getElementById('tanggal');
+        let inputWkt = document.getElementById('wkt_jemput');
+        let btnCari = document.getElementById('btn-search');
+
+        function checkInput() {
+            if (inputDriver.value !== "" && inputTgl.value !== "" && inputWkt.value !== "") {
+                btnCari.removeAttribute('disabled');
+            } else {
+                btnCari.setAttribute('disabled', true);
+            }
+        }
+
+        inputDriver.addEventListener('input', checkInput);
+        inputTgl.addEventListener('input', checkInput);
+        inputWkt.addEventListener('input', checkInput);
+    </script>
 </body>
 
 </html>

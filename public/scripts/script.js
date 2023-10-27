@@ -1,9 +1,10 @@
-// document.addEventListener("DOMContentLoaded", function() {
-//     var myOffcanvas = document.getElementById('offcanvasNavbar');
-//     var bsOffcanvas = new bootstrap.Offcanvas(myOffcanvas);
-//     document.getElementById("OpenMenu").addEventListener('click', function(e) {
-//         e.preventDefault();
-//         e.stopPropagation();
-//         bsOffcanvas.toggle();
-//     });
-// });
+// const inputDriver = document.getElementById('driverType');
+// const inputTgl = document.getElementById('tanggal');
+// const inputWkt = document.getElementById('wkt_jemput');
+// const btnCari = document.getElementById('btn-search');
+
+// if (inputDriver !== "" && inputTgl !== "" && inputWkt !== "") {
+//     btnCari.removeAttribute('disabled');
+// } else {
+//     btnCari.removeAttribute('disabled');
+// }
