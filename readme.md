@@ -118,3 +118,7 @@ PORT = 1234
 </pre>
 
 # Database Design
+Untuk pembuatan REST API, hanya digunakan satu tabel dengan struktur dan ERD sebagai berikut:<br>
+![ERD1](https://raw.githubusercontent.com/bytadit/bicarent/Challenge_5/erd1.png)<br>
+Database dan tabel bisa dikembangkan lebih lanjut sebagai berikut:<br>
+![ERD2](https://raw.githubusercontent.com/bytadit/bicarent/Challenge_5/erd2.png)
