@@ -15,25 +15,23 @@ const CarModel_1 = require("./../models/CarModel");
 const upload = require("./../../src/upload.js");
 const uploadOnMemory = require("./../../src/uploadOnMemory.js");
 const cloudinary = require("./../../src/cloudinary.js");
+const { v4: uuidv4 } = require('uuid');
 const CLOUDINARY_DIR = "bcr-management-dashboard";
 exports.router = (0, express_1.Router)();
 exports.router.get('/', (req, res) => {
-    res.json({
-        status: "success",
+    res.status(200).json({
         message: 'Hello Sayang:)'
     });
 });
 exports.router.get('/cars', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        res.json({
-            status: "success",
-            message: 'Data seluruh mobil berhasil ditemukan!',
+        res.status(200).json({
+            message: 'Data seluruh mobil',
             data: yield CarModel_1.CarModel.all(),
         });
     }
     catch (error) {
         res.status(500).json({
-            status: "failed",
             message: 'Internal Server Error',
         });
     }
@@ -41,28 +39,27 @@ exports.router.get('/cars', (req, res) => __awaiter(void 0, void 0, void 0, func
 exports.router.get('/cars/:id', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     if (!req.params.id) {
         res.status(400).json({
-            status: "failed",
             message: 'Bad Request',
         });
     }
     try {
-        res.json({
-            status: "success",
-            message: `Data mobil dengan id: ${req.params.id} berhasil ditemukan!`,
+        res.status(200).json({
+            message: `Data mobil dengan id: ${req.params.id}`,
             data: yield CarModel_1.CarModel.findById(req.params.id),
         });
     }
     catch (error) {
         res.status(500).json({
-            status: "failed",
             message: 'Internal Server Error',
         });
     }
 }));
-exports.router.post("/cars", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+exports.router.post("/cars", upload.single('img_url'), (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        res.json({
-            status: "success",
+        const url = `/uploads/${req.file.filename}`;
+        req.body.img_url = url;
+        req.body.img_id = uuidv4();
+        res.status(201).json({
             message: 'Data mobil berhasil disimpan!',
             data: yield CarModel_1.CarModel.insert(req.body)
         });
@@ -79,16 +76,19 @@ exports.router.post("/cars", (req, res) => __awaiter(void 0, void 0, void 0, fun
         }
     }
 }));
-exports.router.put('/cars/:id/edit', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+exports.router.put('/cars/:id/edit', upload.single('img_url'), (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     if (!req.params.id) {
         res.status(400).json({
-            status: "failed",
             message: 'Bad Request',
         });
     }
     try {
-        res.json({
-            status: "success",
+        if (req.body.url !== undefined) {
+            const url = `/uploads/${req.file.filename}`;
+            req.body.img_url = url;
+            req.body.img_id = uuidv4();
+        }
+        res.status(201).json({
             message: 'Data mobil berhasil diubah!',
             data: yield CarModel_1.CarModel.update(req.params.id, req.body),
         });
@@ -102,21 +102,18 @@ exports.router.put('/cars/:id/edit', (req, res) => __awaiter(void 0, void 0, voi
 exports.router.delete('/cars/:id', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     if (!req.params.id) {
         res.status(400).json({
-            status: "failed",
             message: 'Bad Request',
         });
     }
     try {
         const status = yield CarModel_1.CarModel.delete(req.params.id);
-        res.json({
-            status: "success",
+        res.status(201).json({
             data: Boolean(status),
             message: `Data mobil dengan id: ${req.params.id} berhasil dihapus!`
         });
     }
     catch (error) {
         res.status(500).json({
-            status: "failed",
             message: 'Internal Server Error',
         });
     }

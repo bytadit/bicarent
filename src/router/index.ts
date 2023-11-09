@@ -5,28 +5,30 @@ import { CarModel, CarType } from './../models/CarModel';
 const upload = require("./../../src/upload.js");
 const uploadOnMemory = require("./../../src/uploadOnMemory.js");
 const cloudinary = require("./../../src/cloudinary.js");
+const { v4: uuidv4 } = require('uuid');
 
 const CLOUDINARY_DIR = "bcr-management-dashboard"
 
 export const router = Router();
 
+interface MulterRequest extends Request {
+    file: any;
+}
+
 router.get('/', (req: Request, res: Response) => {
-    res.json({
-        status: "success",
+    res.status(200).json({
         message: 'Hello Sayang:)'
     });
 });
 
 router.get('/cars', async (req: Request, res: Response) => {
     try {
-        res.json({
-            status: "success",
-            message:'Data seluruh mobil berhasil ditemukan!',
+        res.status(200).json({
+            message:'Data seluruh mobil',
             data: await CarModel.all(),
         });
     } catch (error) {
         res.status(500).json({
-            status: "failed",
             message: 'Internal Server Error',
         });
     }
@@ -35,25 +37,22 @@ router.get('/cars', async (req: Request, res: Response) => {
 router.get('/cars/:id', async (req: Request, res: Response) => {
     if (!req.params.id) {
         res.status(400).json({
-            status: "failed",
             message: 'Bad Request',
         });
     }
     try {
-        res.json({
-            status: "success",
-            message:`Data mobil dengan id: ${req.params.id} berhasil ditemukan!`,
+        res.status(200).json({
+            message:`Data mobil dengan id: ${req.params.id}`,
             data: await CarModel.findById<CarType>(req.params.id),
         });
     } catch (error) {
         res.status(500).json({
-            status: "failed",
             message: 'Internal Server Error',
         });
     }
 });
 
-router.post("/cars", async (req: Request, res: Response) => {
+router.post("/cars", upload.single('img_url'), async (req: Request, res: Response): Promise<any> => {
     interface CarData {
         name: string;
         size: string;
@@ -62,8 +61,10 @@ router.post("/cars", async (req: Request, res: Response) => {
         img_url: string;
     }
     try {
-        res.json({
-            status: "success",
+        const url:string = `/uploads/${(req as MulterRequest).file.filename}`;
+        req.body.img_url = url;
+        req.body.img_id = uuidv4();
+        res.status(201).json({
             message:'Data mobil berhasil disimpan!',
             data: await CarModel.insert<CarData, CarType>(req.body)
         })
@@ -79,7 +80,7 @@ router.post("/cars", async (req: Request, res: Response) => {
     }
 });
 
-router.put('/cars/:id/edit', async (req: Request, res: Response) => {
+router.put('/cars/:id/edit', upload.single('img_url'), async (req: Request, res: Response): Promise<any> => {
     interface CarData {
         id: number;
         name: string;
@@ -90,13 +91,16 @@ router.put('/cars/:id/edit', async (req: Request, res: Response) => {
     }
     if (!req.params.id) {
         res.status(400).json({
-            status: "failed",
             message: 'Bad Request',
         });
     }
     try {
-        res.json({
-            status: "success",
+        if(req.body.url !== undefined){
+            const url:string = `/uploads/${(req as MulterRequest).file.filename}`;
+            req.body.img_url = url;
+            req.body.img_id = uuidv4();
+        }
+        res.status(201).json({
             message:'Data mobil berhasil diubah!',
             data: await CarModel.update<CarData, CarType>(req.params.id, req.body),
         });
@@ -110,28 +114,21 @@ router.put('/cars/:id/edit', async (req: Request, res: Response) => {
 router.delete('/cars/:id', async (req: Request, res: Response) => {
     if (!req.params.id) {
         res.status(400).json({
-            status: "failed",
             message: 'Bad Request',
         });
     }
     try {
         const status:number = await CarModel.delete(req.params.id)
-        res.json({
-            status: "success",
+        res.status(201).json({
             data: Boolean(status),
             message: `Data mobil dengan id: ${req.params.id} berhasil dihapus!`
         });
     } catch (error) {
         res.status(500).json({
-            status: "failed",
             message: 'Internal Server Error',
         });
     }
 });
-
-interface MulterRequest extends Request {
-    file: any;
-}
 
 // IMAGE UPLOAD HANDLER
 router.post("/cars/picture",
