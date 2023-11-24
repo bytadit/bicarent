@@ -189,10 +189,10 @@ paths:
                   example: adityabagusp345@gmail.com
                 password:
                   type: string
-                  example: 12345
+                  example: rahasia
                 confPassword:
                   type: string
-                  example: 12345
+                  example: rahasia
         required: false
       responses:
         '200':
@@ -224,7 +224,7 @@ paths:
                   example: adityabagusp345@gmail.com
                 password:
                   type: string
-                  example: 12345
+                  example: rahasia
         required: false
       responses:
         '200':
