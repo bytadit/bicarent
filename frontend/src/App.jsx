@@ -2,7 +2,6 @@ import { Routes, Route } from "react-router-dom";
 import Template from "./template";
 import Home from "./pages/Home";
 import Cars from "./pages/Cars";
-import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
