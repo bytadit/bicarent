@@ -20,6 +20,6 @@ Running this app, is quite simple as well, you just need to :
 1. `npm install` ==> To install all required modules
 2. `npm start` ==> to start app
 
-That's it, i can be better, later
+That's it, i can be better, later <br>
 Preview Below:
 ![](https://github.com/bytadit/bicarent/blob/Challenge_7/preview.gif)
