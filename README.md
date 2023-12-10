@@ -21,3 +21,5 @@ Running this app, is quite simple as well, you just need to :
 2. `npm start` ==> to start app
 
 That's it, i can be better, later
+Preview Below:
+![](https://github.com/bytadit/bicarent/blob/Challenge_7/preview.gif)
