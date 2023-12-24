@@ -1,0 +1,6 @@
+const { app } = require('../app');
+app
+	.listen(3000, () => {
+		console.log('Server listen on url http://localhost:3000');
+		console.log('Swagger Access on url http://localhost:3000/api/v1/api-docs');
+	});
