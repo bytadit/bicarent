@@ -1,7 +1,7 @@
 name: Run Test and Coverage
 on:
   pull_request:
-    branches: [ Challenge_8 ]
+    branches: [ Challenge_9 ]
 
 jobs:
   test:
