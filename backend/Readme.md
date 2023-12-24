@@ -151,9 +151,9 @@ npm run start               : Run app<br/>
 
 # Users Enpoints
 
-### Super Admin Credentials:
-Email: superadmin@gmail.com <br>
-Password: superadmin
+### Admin Credentials:
+Email: admin@gmail.com <br>
+Password: admin123
 
 ## Users Registration
 ```[ENDPOINT] /api/v1/register```
@@ -237,70 +237,6 @@ Password: superadmin
   },
   "meta": {
     "total": 8
-  }
-}
-```
-
-## Who am I
-```[ENDPOINT] /api/v1/cars/user```
-```url
-[GET] http://localhost:5000/api/v1/user
-```
-
-#### Sample Request headers authorization
-```text
-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJzdXBlcl9hZG1pbiIsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE3MDA4MTA4MDYsImV4cCI6MTcwMDgxMTEwNn0.m0Dk3YJvP3byRjaZOWj8GeguE_vuJ79uCN6X6esZJf0
-```
-
-#### Sample Response body
-```json
-{
-  "id": 1,
-  "username": "Admin",
-  "email": "admin@gmail.com",
-  "password": "$2a$12$cgyYkkuMCNYuTzAQpW6HyOop/XIeXJmbX.woFLh48kDcAT6nJAONe",
-  "role": "Admin",
-  "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJzdXBlcl9hZG1pbiIsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE3MDA4MTA4MDYsImV4cCI6MTcwMDgxMTEwNn0.m0Dk3YJvP3byRjaZOWj8GeguE_vuJ79uCN6X6esZJf0",
-  "createdAt": "2023-11-19T22:07:43.439Z",
-  "updatedAt": "2023-11-21T01:01:52.564Z"
-}
-```
-
-## Add Users by Super Admin
-```[ENDPOINT] /api/v1/admin```
-```url
-[POST] http://localhost:5000/api/v1/admin
-```
-
-#### Sample Request body
-```json
-{
-  "username": string,
-  "email": string,
-  "password": string,
-  "confPassword": string,
-}
-```
-
-#### Sample Request headers authorization
-```text
-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJzdXBlcl9hZG1pbiIsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE3MDA4MTA4MDYsImV4cCI6MTcwMDgxMTEwNn0.m0Dk3YJvP3byRjaZOWj8GeguE_vuJ79uCN6X6esZJf0
-```
-
-#### Sample Response body
-```json
-{
-  "status": "OK",
-  "message": "Register User Successfully",
-  "data": {
-    "id": 2,
-    "username": "Admin",
-    "email": "admin@gmail.com",
-    "password": "$2a$12$cgyYkkuMCNYuTzAQpW6HyOop/XIeXJmbX.woFLh48kDcAT6nJAONe",
-    "role": "Admin",
-    "updatedAt": "2023-11-21T01:12:26.129Z",
-    "createdAt": "2023-11-21T01:12:26.129Z",
-    "refresh_token": null
   }
 }
 ```
